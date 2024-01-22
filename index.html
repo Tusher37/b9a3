@@ -7,8 +7,33 @@
     <!-- tailwind and DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- tailwind custom class -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'button-color' : '#FF4240',
+              }
+            }
+          }
+        }
+      </script>
+    <style>
+        .font-manrope{
+            font-family: 'Manrope', sans-serif;
+        }
+        .card.image-full:before {
+            background-color: rgba(19, 19, 24, 0.50);
+        }
+    </style>
 </head>
-<body>
+<body class="font-manrope">
     <header>
         <div>
             <div class="carousel w-full">
@@ -20,7 +45,7 @@
                   </div>
                 </div> 
                 <div id="slide2" class="carousel-item relative w-full">
-                  <img src="Images/champion-.jpg" class="w-full" />
+                  <img src="Images/champion.png" class="w-full" />
                   <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide1" class="btn btn-circle">❮</a> 
                     <a href="#slide1" class="btn btn-circle">❯</a>
@@ -30,7 +55,49 @@
         </div>
     </header>
     <main>
-
+        <!-- Program Section -->
+        <section class="mt-6">
+            <h2 class="text-4xl font-extrabold text-center">Program Sections</h2>
+            <p class="text-xl font-medium text-center pt-6 pb-20">Power your passion for hockey with our dynamic team, featuring live updates, <br> player profiles, events, and exclusive club content.</p>
+            <!-- class="grid grid-cols-1 lg:grid-cols-2" -->
+            <div>
+                <!-- class="card w-96 bg-base-100 shadow-xl image-full" -->
+                <div class="flex gap-24 justify-center">
+                    <div class="card w-5/12 image-full">
+                        <figure><img class="" src="Images/2.png" alt="" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title text-white">Junior Program</h2>
+                          <p class="text-white">Ignite young talents with skill development, teamwork, and fun in our exciting Junior Hockey Program.</p>
+                          <div class="card-actions">
+                            <button class="btn bg-button-color border-none text-white">Register Now!</button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card w-5/12 image-full">
+                        <figure><img class="" src="Images/3.png" alt="" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title text-white">Teenager Program</h2>
+                          <p class="text-white">Elevate skills and sportsmanship in our Teen Hockey Program, fostering growth, camaraderie, and competitive spirit.</p>
+                          <div class="card-actions">
+                            <button class="btn bg-button-color border-none text-white">Register Now!</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-24">
+                    <div class="card w-11/12 image-full">
+                        <figure><img class="w-full" src="Images/4.png" alt="" /></figure>
+                        <div class="card-body w-96 mt-60">
+                          <h2 class="card-title text-white w-6">Professional Program</h2>
+                          <p class="text-white">Forge excellence in our Professional Hockey Program, where elite training meets strategic gameplay for top-tier athletes.</p>
+                          <div class="card-actions">
+                            <button class="btn bg-button-color border-none text-white">Register Now!</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
